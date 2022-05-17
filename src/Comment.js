@@ -11,13 +11,13 @@ export default function Comment(props) {
       </div>
       <p className="comment__body">{props.body}</p>
       <div className="row comment__footer">
-        <div className="row comment__score">
+        <div className="row comment__votes">
           <button
             className="comment__vote-btn up"
             aria-label="vote up"
             id="upvote"
           ></button>
-          <span>{props.score}</span>
+          <span className="comment__score">{props.score}</span>
           <button
             className="comment__vote-btn down"
             aria-label="vote down"

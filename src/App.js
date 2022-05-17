@@ -11,7 +11,7 @@ export default function App() {
           loggedIn={false}
           age="1 week ago"
           body="Hello! How are you? Me, I am fine thank you very much."
-          score="1"
+          score="10"
         />
       </section>
     </div>

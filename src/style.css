@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  --clr-blue: hsl(238, 40%, 52%);
+  --clr-red: hsl(358, 79%, 66%);
+  --clr-light-blue: hsl(239, 57%, 85%);
+  --clr-light-red: hsl(357, 100%, 86%);
+
+  --clr-ntr-100: hsl(0, 0%, 100%);
+  --clr-ntr-200: hsl(228, 33%, 97%);
+  --clr-ntr-300: hsl(223, 19%, 93%);
+  --clr-ntr-500: hsl(211, 10%, 45%);
+  --clr-ntr-800: hsl(212, 24%, 26%);
+
+  --ff: "Rubik", sans-serif;
+  --fs: 1rem;
+  --fw-light: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --gap: 1em;
+  --card-radius: 5px;
+  --button-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-ntr-200);
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  color: inherit;
+  font: inherit;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 360px;
+  width: calc(100vw - 1.5em);
+}
+
+.comment {
+  background-color: var(--clr-ntr-100);
+  border-radius: var(--card-radius);
+  padding: var(--gap);
+}

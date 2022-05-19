@@ -14,6 +14,19 @@ export default function App() {
           score="10"
         />
       </section>
+      <form className="new-comment-form">
+        <textarea placeholder="Add a comment..."></textarea>
+        <div className="row">
+          <img
+            className="form__img"
+            src="./images/avatars/image-amyrobson.png"
+            alt=""
+          ></img>
+          <button type="submit" className="form__send-btn">
+            SEND
+          </button>
+        </div>
+      </form>
     </div>
   );
 }

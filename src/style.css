@@ -76,7 +76,8 @@ input {
   gap: var(--gap);
 }
 
-.comment__img {
+.comment__img,
+.form__img {
   aspect-ratio: 1;
   height: 30px;
   object-fit: cover;
@@ -169,4 +170,36 @@ input {
   background-position: top 50% left 0;
   margin-left: 10px;
   min-width: 60px;
+}
+
+.new-comment-form {
+  background-color: var(--clr-ntr-100);
+  border-radius: var(--card-radius);
+  padding: var(--gap);
+}
+
+.new-comment-form > textarea {
+  border-color: var(--clr-ntr-200);
+  border-radius: var(--card-radius);
+  color: inherit;
+  font: inherit;
+  min-height: 100px;
+  padding: var(--gap);
+  resize: none;
+  width: 100%;
+}
+
+.new-comment-form > .row {
+  justify-content: space-between;
+  margin-top: var(--gap);
+}
+
+.form__send-btn {
+  background-color: var(--clr-blue);
+  border-radius: 5px;
+  border: 0;
+  color: var(--clr-ntr-100);
+  font-size: calc(var(--fs) * 0.9);
+  min-width: 90px;
+  padding: calc(var(--gap) * 0.66) var(--gap);
 }

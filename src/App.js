@@ -9,7 +9,7 @@ export default function App() {
     return (
       <Comment
         key={comment.id}
-        user={comment.username}
+        user={comment.user.username}
         img={comment.user.image.png}
         loggedIn={false}
         age={comment.createdAt}

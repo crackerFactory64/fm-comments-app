@@ -33,6 +33,7 @@ body {
   background-color: var(--clr-ntr-200);
   font-family: var(--ff);
   min-height: 100vh;
+  padding-bottom: var(--gap);
 }
 
 img {
@@ -62,11 +63,16 @@ input {
   display: none;
 }
 
-.comments {
+.comments,
+.comment__replies {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
   margin-block: 2em;
+}
+
+.comment-container {
+  padding: 0;
 }
 
 .comment {
@@ -173,6 +179,22 @@ input {
   background-position: top 50% left 0;
   margin-left: 10px;
   min-width: 60px;
+}
+
+.comment__replies {
+  border-left: 2px solid var(--clr-ntr-300);
+  margin-bottom: 0;
+  margin-top: var(--gap);
+}
+
+.comment.comment__reply {
+  margin-left: auto;
+  width: 95%;
+}
+
+.comment__at {
+  color: var(--clr-blue);
+  font-weight: var(--fw-medium);
 }
 
 .new-comment-form {

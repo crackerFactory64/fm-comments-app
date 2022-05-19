@@ -15,6 +15,7 @@ export default function App() {
         age={comment.createdAt}
         body={comment.content}
         score={comment.score}
+        replies={comment.replies}
       />
     );
   });

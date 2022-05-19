@@ -43,6 +43,7 @@ img {
 button,
 input {
   color: inherit;
+  cursor: pointer;
   font: inherit;
 }
 
@@ -84,6 +85,18 @@ input {
 .comment__user {
   color: var(--clr-ntr-800);
   font-weight: var(--fw-bold);
+}
+
+.comment__you {
+  background-color: var(--clr-blue);
+  border-radius: 2.5px;
+  color: var(--clr-ntr-100);
+  font-size: calc(var(--fs) * 0.7);
+  font-weight: var(--fw-medium);
+  margin-left: 10px;
+  letter-spacing: 1px;
+  padding: 2.5px 5px;
+  vertical-align: middle;
 }
 
 .comment__age {
@@ -128,13 +141,32 @@ input {
   background-image: url(/public/images/icon-minus.svg);
 }
 
-.comment__reply-btn {
+.comment__reply-btn,
+.comment__delete-btn,
+.comment__edit-btn {
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 1.1ch;
+  border: 0;
+  text-align: end;
+}
+
+.comment__reply-btn {
   background-image: url(/public/images/icon-reply.svg);
   background-position: top 66% left 0;
-  background-repeat: no-repeat;
-  background-size: 1.2ch;
-  border: 0;
   min-width: 70px;
-  text-align: end;
+}
+
+.comment__delete-btn {
+  background-image: url(/public/images/icon-delete.svg);
+  background-position: top 50% left 0;
+  color: var(--clr-red);
+  min-width: 80px;
+}
+
+.comment__edit-btn {
+  background-image: url(/public/images/icon-edit.svg);
+  background-position: top 50% left 0;
+  margin-left: 10px;
+  min-width: 60px;
 }

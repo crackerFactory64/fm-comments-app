@@ -5,8 +5,11 @@ export default function Comment(props) {
     <article className="comment">
       <div className="row comment__header">
         <img className="comment__img" src={props.img} alt={props.user} />
-        <p className="comment__user">{props.user}</p>
-        <p className={props.loggedIn ? "comment__you" : "hide"}>you</p>
+        <p className="comment__user">
+          {props.user}
+          <span className={props.loggedIn ? "comment__you" : "hide"}>you</span>
+        </p>
+
         <p className="comment__age">{props.age}</p>
       </div>
       <p className="comment__body">{props.body}</p>
@@ -24,7 +27,13 @@ export default function Comment(props) {
             id="downvote"
           ></button>
         </div>
-        <button className="comment__reply-btn">Reply</button>
+        <button className={props.loggedIn ? "hide" : "comment__reply-btn"}>
+          Reply
+        </button>
+        <div className={props.loggedIn ? "" : "hide"}>
+          <button className="comment__delete-btn">Delete</button>
+          <button className="comment__edit-btn">Edit</button>
+        </div>
       </div>
     </article>
   );

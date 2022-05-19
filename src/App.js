@@ -1,19 +1,27 @@
 import React from "react";
 import "./style.css";
 import Comment from "./Comment";
+import { comments } from "./commentData.js";
 export default function App() {
+  console.log(comments);
+
+  const commentsEl = comments.map((comment) => {
+    return (
+      <Comment
+        key={comment.id}
+        user={comment.username}
+        img={comment.user.image.png}
+        loggedIn={false}
+        age={comment.createdAt}
+        body={comment.content}
+        score={comment.score}
+      />
+    );
+  });
+
   return (
     <div className="container">
-      <section className="comments">
-        <Comment
-          user="Lee"
-          img="./images/avatars/image-maxblagun.png"
-          loggedIn={false}
-          age="1 week ago"
-          body="Hello! How are you? Me, I am fine thank you very much."
-          score="10"
-        />
-      </section>
+      <section className="comments">{commentsEl}</section>
       <form className="new-comment-form">
         <textarea placeholder="Add a comment..."></textarea>
         <div className="row">

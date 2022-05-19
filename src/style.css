@@ -63,6 +63,9 @@ input {
 }
 
 .comments {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
   margin-block: 2em;
 }
 
